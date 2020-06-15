@@ -1,2 +1,11 @@
 <!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<page-router-outlet></page-router-outlet>
+<StackLayout>
+  <FlexboxLayout>
+    <Button text="Home" (tap)="navigate('home')"></Button>
+    <Button text="About" (tap)="navigate('about')"></Button>
+    <Button text="Contact" (tap)="navigate('contact')"></Button>
+  </FlexboxLayout>
+  <StackLayout>
+    <page-router-outlet #outlet actionBarVisibility="never"></page-router-outlet>
+  </StackLayout>
+</StackLayout>
