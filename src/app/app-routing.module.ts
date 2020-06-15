@@ -1,14 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "@nativescript/angular";
-
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
+import { HomeComponent } from "./home";
+import { AboutComponent } from "./about";
+import { ContactComponent } from "./contact";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
-    { path: "items", component: ItemsComponent },
-    { path: "item/:id", component: ItemDetailComponent }
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
